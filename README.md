@@ -107,6 +107,12 @@
   <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
       <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino" width="50" height="50" />
   </a>
+  <a href="https://www.raspberrypi.com/" target="_blank" rel="noreferrer">
+      <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/500/external-raspberry-pi-is-a-small-and-affordable-computer-that-you-can-use-to-learn-programming-logo-color-tal-revivo.png" alt="Raspberry Pi" width="50" height="50" />
+  </a>
+  <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noreferrer">
+      <img src="https://cdn.worldvectorlogo.com/logos/espressif-systems.svg" alt="ESP 32" width="50" height="50" />
+  </a>
   <!-- Missing ESP32 and Raspberry Pi -->
 </div>
 
@@ -125,6 +131,12 @@
 <div align="center">
   <a href="https://www.autodesk.com/products/fusion-360" target="_blank" rel="noreferrer">
       <img src="https://damassets.autodesk.net/content/dam/autodesk/www/product-imagery/badge-75x75/simplified-badges/fusion-360-product-design-extension-2023-simplified-badge-75x75.png" alt="Autodesk Fusion 360" width="50" height="50" />
+  </a>
+  <a href="https://ultimaker.com/software/ultimaker-cura/" target="_blank" rel="noreferrer">
+      <img src="https://img.utdstc.com/icon/97a/a5e/97aa5e531fee9e0b18d7028609d091062db6e392c49e45859ba0aeeeb118eae4:200" alt="Ultimaker Cura" width="50" height="50" />
+  </a>
+  <a href="https://orca-slicer.com/" target="_blank" rel="noreferrer">
+      <img src="https://orca-slicer.com/wp-content/uploads/2024/11/orca-slicer-logo.png" alt="Orca Slicer" width="50" height="50" />
   </a>
   <!-- Missing Cura and OrcaSlicer -->
 </div>
