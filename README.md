@@ -5,12 +5,14 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ManuelADSantos&show_icons=true&locale=en&layout=compact&theme=transparent" />
 </div> -->
 
-<!-- Images from https://icons8.com/icons/set/terraform -->
+<!--
+ Images from https://icons8.com/icons/set/terraform
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 <a href="https://www.python.org" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/>
     </a>
+-->
 
 
 ---
