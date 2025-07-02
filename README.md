@@ -8,6 +8,11 @@
 <!-- Images from https://icons8.com/icons/set/terraform -->
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
+<a href="https://www.python.org" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" width="50" height="50" />
+    </a>
+
+
 ---
 <h3 align="center" style="font-weight: bold"> 🖥️ Programming Languages: </h3>
 <div align="center">
