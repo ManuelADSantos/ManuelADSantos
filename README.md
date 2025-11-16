@@ -14,6 +14,9 @@
     </a>
 -->
 
+WIP
+
+[![My Skills](https://skillicons.dev/icons?i=java,kotlin,nodejs,figma&theme=light)](https://skillicons.dev)
 
 ---
 <h3 align="center" style="font-weight: bold"> 🖥️ Programming Languages: </h3>
