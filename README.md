@@ -59,7 +59,7 @@
         <td align="center" valign="top" style="padding:5px;">
             <figure style="margin:0;">
                 <a href="https://github.com/ManuelADSantos/ManuelADSantos">
-                    <img src="WIP.gif" alt="Project 1" style="width:395px; height:auto; border-radius:8px;">
+                    <img src="WIP.gif" alt="Project 1" style="width:350px; height:auto; border-radius:8px;">
                 </a>
                 <br>
                 <figcaption style="margin-top:6px;">Project 1 (Coming Soon)</figcaption>
@@ -69,7 +69,7 @@
         <td align="center" valign="top" style="padding:5px;">
             <figure style="margin:0;">
                 <a href="https://github.com/ManuelADSantos/ManuelADSantos">
-                    <img src="WIP.gif" alt="Project 2" style="width:395px; height:auto; border-radius:8px;">
+                    <img src="WIP.gif" alt="Project 2" style="width:350px; height:auto; border-radius:8px;">
                 </a>
                 <br>
                 <figcaption style="margin-top:6px;">Project 2 (Coming Soon)</figcaption>
@@ -82,7 +82,7 @@
         <td align="center" valign="top" style="padding:5px;">
             <figure style="margin:0;">
                 <a href="https://github.com/ManuelADSantos/ManuelADSantos">
-                    <img src="WIP.gif" alt="Project 3" style="width:395px; height:auto; border-radius:8px;">
+                    <img src="WIP.gif" alt="Project 3" style="width:350px; height:auto; border-radius:8px;">
                 </a>
                 <br>
                 <figcaption style="margin-top:6px;">Project 3 (Coming Soon)</figcaption>
@@ -92,7 +92,7 @@
         <td align="center" valign="top" style="padding:5px;">
             <figure style="margin:0;">
                 <a href="https://github.com/ManuelADSantos/ManuelADSantos">
-                    <img src="WIP.gif" alt="Project 4" style="width:395px; height:auto; border-radius:8px;">
+                    <img src="WIP.gif" alt="Project 4" style="width:350px; height:auto; border-radius:8px;">
                 </a>
                 <br>
                 <figcaption style="margin-top:6px;">Project 4 (Coming Soon)</figcaption>
