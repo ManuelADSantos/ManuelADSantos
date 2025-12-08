@@ -11,7 +11,7 @@
 <table align="center" style="border: none; border-collapse: collapse;">
     <tr>
         <!-- Left side -->
-        <td style="padding-right: 20px; vertical-align: middle; line-height: 10; font-size: 10px;">
+        <td style="padding-right: 20px; vertical-align: middle; line-height: 3; font-size: 10px;">
             🌱 Currently at Planet Farms, automating the growth of tasty salads <br>
             🌐 <b>Homelab</b> enthusiast and self-proclaimed Raspberry Pi wizard <br>
             🛠️ Proud owner and reviver of a good old Ender3 3D printer<br>
