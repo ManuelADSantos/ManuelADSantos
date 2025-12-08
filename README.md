@@ -35,18 +35,18 @@
 [![Python](https://skills.syvixor.com/api/icons?perline=15&i=python)](https://www.python.org)
 [![Rust](https://skills.syvixor.com/api/icons?perline=15&i=rust)](https://www.rust-lang.org/)
 [![Bash](https://skills.syvixor.com/api/icons?perline=15&i=bash)](https://www.gnu.org/software/bash/)
-[![Ansible](https://skills.syvixor.com/api/icons?perline=15&i=ansible)](https://www.ansible.com/)
 [![Docker](https://skills.syvixor.com/api/icons?perline=15&i=docker)](https://www.docker.com/)
+[![Kubernetes](https://skills.syvixor.com/api/icons?perline=15&i=kubernetes)](https://kubernetes.io/)
 [![Proxmox](https://skills.syvixor.com/api/icons?perline=15&i=proxmox)](https://www.proxmox.com/)
+[![Ansible](https://skills.syvixor.com/api/icons?perline=15&i=ansible)](https://www.ansible.com/)
 [![Terraform](https://skills.syvixor.com/api/icons?perline=15&i=terraform)](https://www.terraform.io/)
 [![Arduino](https://skills.syvixor.com/api/icons?perline=15&i=arduino)](https://www.arduino.cc/)
-[![CMake](https://skills.syvixor.com/api/icons?perline=15&i=cmake)](https://cmake.org/)
 [![Raspberry Pi](https://skills.syvixor.com/api/icons?perline=15&i=raspberrypi)](https://www.raspberrypi.com/)
 [![ESP32](https://skills.syvixor.com/api/icons?perline=15&i=esp32)](https://www.espressif.com/en/products/socs/esp32)
 [![Home Assistant](https://skills.syvixor.com/api/icons?perline=15&i=homeassistant)](https://www.home-assistant.io/)
 [![ROS](https://skills.syvixor.com/api/icons?perline=15&i=ros)](https://www.ros.org/)
 [![n8n](https://skills.syvixor.com/api/icons?perline=15&i=n8n)](https://n8n.io/)
-[![Fusion 360](https://skills.syvixor.com/api/icons?perline=15&i=autodeskfusion)](https://www.autodesk.com/products/fusion-360)
+<!--[![Fusion 360](https://skills.syvixor.com/api/icons?perline=15&i=autodeskfusion)](https://www.autodesk.com/products/fusion-360)-->
 </div>
 
 <h3 align="center" style="font-weight: bold"> Take a look at some of my projects </h3>
