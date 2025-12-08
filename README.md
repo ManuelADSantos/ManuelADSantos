@@ -12,10 +12,12 @@
     <tr>
         <!-- Left side -->
         <td style="padding-right: 20px; vertical-align: middle;">
-            🌱 Currently working at Planet Farms, automating the growth of some tasty salads <br>
-            🔧 Proud owner and maintainer of a nightmare called Ender3 <br>
-            ⚜️ Former Scout Leader and current outdoor enthusiast <br>
-            🤖 Interested in Embedded Systems, Robotics, Electronics and Entrepreneurship <br>
+            🌱 Currently at Planet Farms, automating the growth of tasty salads <br>
+            🌐 <b>Homelab</b> enthusiast and self-proclaimed Raspberry Pi wizard <br>
+            🛠️ Proud owner and reviver of a good old Ender3 3D printer<br>
+            ⚜️ Former <b>Scout</b> Leader and current outdoor enthusiast <br>
+            🧭 Getting started on rogaining (getting lost for now)<br>
+            🤖 Interested in <b>Embedded Systems, Robotics and Electronics</b> <br>
         </td>
         <!-- Right side -->
         <td align="center" style="vertical-align: top;">
