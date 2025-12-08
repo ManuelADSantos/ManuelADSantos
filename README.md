@@ -53,29 +53,59 @@
 <table align="center" style="border: none; border-collapse: collapse; width: 100%;">
     <!-- Row 1 -->
     <tr>
+        <!-- Column 1 -->
         <td style="width: 45%; height: 200px; text-align: center; vertical-align: middle;">
-            Project 1
+            <a href="https://github.com/your/project1">
+                <img src="WIP.gif" alt="Project 1" width="300" height="300">
+                <br>
+                <strong>Project 1</strong>
+            </a>
         </td>
+        <!-- Column 2 -->
         <td style="width: 45%; height: 200px; text-align: center; vertical-align: middle;">
-            Project 2
+            <a href="https://github.com/your/project2">
+                <img src="WIP.gif" alt="Project 2" width="300" height="300">
+                <br>
+                <strong>Project 2</strong>
+            </a>
         </td>
     </tr>
     <!-- Row 2 -->
     <tr>
+        <!-- Column 1 -->
         <td style="width: 45%; height: 200px; text-align: center; vertical-align: middle;">
-            Project 3
+            <a href="https://github.com/your/project3">
+                <img src="WIP.gif" alt="Project 3" width="300" height="300">
+                <br>
+                <strong>Project 3</strong>
+            </a>
         </td>
+        <!-- Column 2 -->
         <td style="width: 45%; height: 200px; text-align: center; vertical-align: middle;">
-            Project 4
+            <a href="https://github.com/your/project4">
+                <img src="WIP.gif" alt="Project 4" width="300" height="300">
+                <br>
+                <strong>Project 4</strong>
+            </a>
         </td>
     </tr>
     <!-- Row 3 -->
     <tr>
+        <!-- Column 1 -->
         <td style="width: 45%; height: 200px; text-align: center; vertical-align: middle;">
-            Project 5
+            <a href="https://github.com/your/project5">
+                <img src="WIP.gif" alt="Project 5" width="300" height="300">
+                <br>
+                <strong>Project 5</strong>
+            </a>
         </td>
+        <!-- Column 2 -->
         <td style="width: 45%; height: 200px; text-align: center; vertical-align: middle;">
-            Project 6
+            <a href="https://github.com/your/project6">
+                <img src="WIP.gif" alt="Project 6" width="300" height="300">
+                <br>
+                <strong>Project 6</strong>
+            </a>
         </td>
     </tr>
 </table>

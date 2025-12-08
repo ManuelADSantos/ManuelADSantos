@@ -10,7 +10,7 @@
     </style>
 
     <!-- Background -->
-    <rect class="background" width="300" height="200" />
+    <rect class="background" width="300" height="200" rx="20" ry="20"/>
 
     <!-- Wires -->
     <line x1="50" y1="100" x2="120" y2="100" stroke="#ccc" stroke-width="4" />
@@ -21,28 +21,23 @@
     <line x1="50" y1="150" x2="50" y2="100" stroke="#ccc" stroke-width="4" />
 
     <!-- Resistor -->
-    <rect x="120" y="90" width="20" height="20" fill="#f00" stroke="#ccc" stroke-width="2" />
+    <!-- <rect x="120" y="90" width="20" height="20" fill="#f00" stroke="#ccc" stroke-width="2" /> -->
 
     <!-- Battery -->
-    <rect x="40" y="120" width="10" height="30" fill="#f00" />
-    <rect x="60" y="120" width="10" height="30" fill="#0f0" />
+    <!-- <rect x="40" y="120" width="10" height="30" fill="#f00" />
+    <rect x="60" y="120" width="10" height="30" fill="#0f0" /> -->
 
     <!-- Switch -->
-    <line x1="200" y1="50" x2="220" y2="70" stroke="#000" stroke-width="4" />
+    <!-- <line x1="200" y1="50" x2="220" y2="70" stroke="#000" stroke-width="4" />
     <line x1="200" y1="50" x2="220" y2="70" stroke="#fff" stroke-width="4">
         <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-    </line>
+    </line> -->
 
     <!-- Path for current flow -->
     <path id="circuitPath" fill="none" stroke="none"
-        d="
-    M 0,0 
-    L 120,100 
-    L 120,50 
-    L 220,50 
-    L 220,150 
-    L 50,150 
-    L 50,100" />
+        d="M 0,0 
+        L 120,0 
+        Z "/>
 
     <!-- Multiple current flow dots -->
     <g id="currentDots">
@@ -64,7 +59,7 @@
     </g>
 
     <!-- LEDs -->
-    <circle cx="120" cy="75" r="5" fill="#0ff">
+    <!-- <circle cx="120" cy="75" r="5" fill="#0ff">
         <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
             begin="0.1s" />
     </circle>
@@ -75,7 +70,7 @@
     <circle cx="120" cy="125" r="5" fill="#0ff">
         <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
             begin="0.5s" />
-    </circle>
+    </circle> -->
 
     <!-- Glow effect -->
     <defs>
