@@ -16,14 +16,14 @@ Programming Languages
 [![MATLAB](https://skills.syvixor.com/api/icons?perline=15&i=matlab)](https://www.mathworks.com/)
 [![Bash](https://skills.syvixor.com/api/icons?perline=15&i=bash)](https://www.gnu.org/software/bash/)
 [![Assembly](https://skills.syvixor.com/api/icons?perline=15&i=assembly)](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
-<!-- [![Rust](https://skills.syvixor.com/api/icons?perline=15&i=rust)](https://www.rust-lang.org/) -->
-<!-- [![LaTeX](https://skills.syvixor.com/api/icons?perline=15&i=latex)](https://www.latex-project.org/) -->
+[![Rust](https://skills.syvixor.com/api/icons?perline=15&i=rust)](https://www.rust-lang.org/)
+[![LaTeX](https://skills.syvixor.com/api/icons?perline=15&i=latex)](https://www.latex-project.org/)
 </div>
 
 <!-- ==============================================================================================
 Web Development
 ================================================================================================-->
-<!-- <h3 align="center" style="font-weight: bold"> 🌐 Web Development </h3>
+<h3 align="center" style="font-weight: bold"> 🌐 Web Development </h3>
 <div align="center">
 
 [![HTML](https://skills.syvixor.com/api/icons?perline=15&i=html)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -31,7 +31,7 @@ Web Development
 [![JavaScript](https://skills.syvixor.com/api/icons?perline=15&i=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![React](https://skills.syvixor.com/api/icons?perline=15&i=react)](https://reactjs.org/)
 [![FastAPI](https://skills.syvixor.com/api/icons?perline=15&i=fastapi)](https://fastapi.tiangolo.com/)
-</div> -->
+</div>
 
 <!-- ==============================================================================================
 Infrastructure, DevOps & Cloud
@@ -47,7 +47,7 @@ Infrastructure, DevOps & Cloud
 [![Terraform](https://skills.syvixor.com/api/icons?perline=15&i=terraform)](https://www.terraform.io/)
 [![Cloudflare](https://skills.syvixor.com/api/icons?perline=15&i=cloudflare)](https://www.cloudflare.com/)
 [![AWS](https://skills.syvixor.com/api/icons?perline=15&i=aws)](https://aws.amazon.com/)
-<!-- [![GCP](https://skills.syvixor.com/api/icons?perline=15&i=gcp)](https://cloud.google.com/) -->
+[![GCP](https://skills.syvixor.com/api/icons?perline=15&i=gcp)](https://cloud.google.com/)
 </div>
 
 <!-- ==============================================================================================
@@ -74,9 +74,9 @@ AI & Data Science
 [![Ollama](https://skills.syvixor.com/api/icons?perline=15&i=ollama)](https://ollama.com/)
 [![NumPy](https://skills.syvixor.com/api/icons?perline=15&i=numpy)](https://numpy.org/)
 [![n8n](https://skills.syvixor.com/api/icons?perline=15&i=n8n)](https://n8n.io/)
-<!-- [![TensorFlow](https://skills.syvixor.com/api/icons?perline=15&i=tensorflow)](https://www.tensorflow.org/)
+[![TensorFlow](https://skills.syvixor.com/api/icons?perline=15&i=tensorflow)](https://www.tensorflow.org/)
 [![Scikit-learn](https://skills.syvixor.com/api/icons?perline=15&i=scikitlearn)](https://scikit-learn.org/)
-[![HuggingFace](https://skills.syvixor.com/api/icons?perline=15&i=huggingface)](https://huggingface.co/) -->
+[![HuggingFace](https://skills.syvixor.com/api/icons?perline=15&i=huggingface)](https://huggingface.co/)
 </div>
 
 <!-- ==============================================================================================
@@ -88,7 +88,7 @@ Embedded Systems & Robotics
 [![Arduino](https://skills.syvixor.com/api/icons?perline=15&i=arduino)](https://www.arduino.cc/)
 [![Raspberry Pi](https://skills.syvixor.com/api/icons?perline=15&i=raspberrypi)](https://www.raspberrypi.com/)
 [![ESP32](https://skills.syvixor.com/api/icons?perline=15&i=esp32)](https://www.espressif.com/en/products/socs/esp32)
-[![ROS](https://skillicons.dev/icons?i=ros&theme=dark&perline=15)](https://www.ros.org/)
+[![ROS](https://skills.syvixor.com/api/icons?perline=15&i=ros)](https://www.ros.org/)
 [![Home Assistant](https://skills.syvixor.com/api/icons?perline=15&i=homeassistant)](https://www.home-assistant.io/)
 <!-- [![FreeRTOS](https://skills.syvixor.com/api/icons?perline=15&i=freertos)](https://www.freertos.org/) -->
 </div>
@@ -105,13 +105,13 @@ Game Development
 <!-- ==============================================================================================
 3D Modeling & Printing
 ================================================================================================-->
-<!-- <h3 align="center" style="font-weight: bold"> 🖨️ 3D Modeling & Printing </h3>
+<h3 align="center" style="font-weight: bold"> 🖨️ 3D Modeling & Printing </h3>
 <div align="center">
 
-[![Fusion 360](https://skills.syvixor.com/api/icons?perline=15&i=fusion360)](https://www.autodesk.com/products/fusion-360)
+[![Fusion 360](https://skills.syvixor.com/api/icons?perline=15&i=autodeskfusion)](https://www.autodesk.com/products/fusion-360)
 [![Orca Slicer](https://skills.syvixor.com/api/icons?perline=15&i=orcaslicer)](https://github.com/OrcaSlicer/OrcaSlicer)
 [![Blender](https://skills.syvixor.com/api/icons?perline=15&i=blender)](https://www.blender.org/)
-</div> -->
+</div>
 
 <!-- ==============================================================================================
 Productivity & Collaboration
@@ -128,9 +128,9 @@ Productivity & Collaboration
 <!-- ==============================================================================================
 Socials
 ================================================================================================-->
-<!-- <h3 align="center">Socials:</h3>
+<h3 align="center">Socials:</h3>
 <div align="center">
 
 [![GitHub](https://skills.syvixor.com/api/icons?perline=15&i=github)](https://github.com/ManuelADSantos)
 [![LinkedIn](https://skills.syvixor.com/api/icons?perline=15&i=linkedin)](https://www.linkedin.com/in/manueladsantos)
-</div> -->
+</div>
