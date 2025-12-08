@@ -1,16 +1,35 @@
 <!-- markdownlint-disable MD033 -->
-<h1 align="center">Hi </h1>
-
-<div align="center">
-<!-- <a class="link" href="https://github.com/ManuelADSantos/ManuelADSantos/blame/main/header.svg"> -->
-
-![My Header](header.svg)
-
+<div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+    <!-- Left side -->
+    <div style="text-align: center; font-size: 2em;">
+        <strong>Hi there</strong>
+    </div>
+    <!-- Right side -->
+    <div align="center">
+        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Waving Hand" width="40" height="40">
+    </div>
 </div>
 
-<h3 align="center">I'm Manuel, an Electrical and Computer Engineer!</h3>
+<div style="text-align: center;">
+    <h3>I'm Manuel, a 🇵🇹 Portuguese Electrical and Computer Engineer who likes to play around and find out!</h3>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+    <!-- Left side -->
+    <div>
+        🌱 Currently working at Planet Farms, automating the growth of some tasty salads <br>
+        🔧 Proud owner and maintainer of a nightmare called Ender3 <br>
+        ⚜️ Former Scout Leader and outdoor enthusiast <br>
+    </div>
+    <!-- Right side -->
+    <div align="center">
+
+![My Header](header.svg)
+    </div>
+</div>
 
 ---
+
 <h3 align="center" style="font-weight: bold"> You can find me playing around with </h3>
 <div align="center">
 
@@ -32,10 +51,14 @@
 
 </div>
 
+---
+
+<h3 align="center" style="font-weight: bold"> Take a look at some of my projects </h3>
+
 <!-- ==============================================================================================
 List of Stuff
 ================================================================================================-->
-<!-- 
+<!--
 [![C](https://skills.syvixor.com/api/icons?perline=15&i=c)](https://www.c-language.org/)
 [![C++](https://skills.syvixor.com/api/icons?perline=15&i=cpp)](https://isocpp.org/get-started)
 [![Python](https://skills.syvixor.com/api/icons?perline=15&i=python)](https://www.python.org)

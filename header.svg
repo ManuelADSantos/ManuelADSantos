@@ -1,99 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 200" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dark/light mode CSS -->
+    <style>
+        rect.background { fill: #ffffff; }
+        @media (prefers-color-scheme: dark) 
+        {
+            rect.background { fill: #0b0f1a; }
+        }
+    </style>
 
-  <!-- Ground plate -->
-  <rect x="12" y="160" width="196" height="36" rx="6" fill="#0f1626" stroke="#1b2430" stroke-width="3"/>
+    <!-- Background -->
+    <rect class="background" width="300" height="200" />
 
-  <!-- Base -->
-  <g transform="translate(110,170)">
-    <circle r="16" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-    <circle r="10" fill="#0b1220"/>
-    <circle cx="-6" cy="-4" r="2" fill="#7be7ff"/>
-  </g>
+    <!-- Wires -->
+    <line x1="50" y1="100" x2="120" y2="100" stroke="#ccc" stroke-width="4" />
+    <line x1="120" y1="100" x2="120" y2="50" stroke="#ccc" stroke-width="4" />
+    <line x1="120" y1="50" x2="220" y2="50" stroke="#ccc" stroke-width="4" />
+    <line x1="220" y1="50" x2="220" y2="150" stroke="#ccc" stroke-width="4" />
+    <line x1="220" y1="150" x2="50" y2="150" stroke="#ccc" stroke-width="4" />
+    <line x1="50" y1="150" x2="50" y2="100" stroke="#ccc" stroke-width="4" />
 
-  <!-- Shoulder -->
-  <g id="shoulder" transform="translate(110,148)">
-    <rect x="-10" y="-6" width="20" height="12" rx="2" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-    
-    <!-- Shoulder rotation -->
-    <animateTransform
-      attributeName="transform"
-      type="rotate"
-      from="-12 0 0"
-      to="22 0 0"
-      dur="3.5s"
-      repeatCount="indefinite"
-      additive="sum"/>
+    <!-- Resistor -->
+    <rect x="120" y="90" width="20" height="20" fill="#f00" stroke="#ccc" stroke-width="2" />
 
-    <!-- Upper arm -->
-    <rect x="-7" y="-46" width="14" height="80" rx="4" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-    <rect x="-3.5" y="-30" width="7" height="18" rx="1.5" fill="rgba(255,255,255,0.06)"/>
+    <!-- Battery -->
+    <rect x="40" y="120" width="10" height="30" fill="#f00" />
+    <rect x="60" y="120" width="10" height="30" fill="#0f0" />
 
-    <!-- Elbow -->
-    <g id="elbow" transform="translate(0,-46)">
-      <circle r="9" fill="#6c7a83" stroke="#364247" stroke-width="1.5"/>
-      
-      <!-- Elbow rotation -->
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="10 0 0"
-        to="64 0 0"
-        dur="2.2s"
-        repeatCount="indefinite"
-        additive="sum"/>
+    <!-- Switch -->
+    <line x1="200" y1="50" x2="220" y2="70" stroke="#000" stroke-width="4" />
+    <line x1="200" y1="50" x2="220" y2="70" stroke="#fff" stroke-width="4">
+        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
+    </line>
 
-      <!-- Forearm -->
-      <rect x="-5.5" y="-72" width="11" height="68" rx="3.5" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-      <rect x="-3" y="-58" width="6" height="34" rx="2" fill="rgba(255,255,255,0.06)"/>
+    <!-- Path for current flow -->
+    <path id="circuitPath" fill="none" stroke="none"
+        d="
+    M 0,0 
+    L 120,100 
+    L 120,50 
+    L 220,50 
+    L 220,150 
+    L 50,150 
+    L 50,100" />
 
-      <!-- Wrist -->
-      <g id="wrist" transform="translate(0,-70)">
-        <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-        
-        <animateTransform
-          attributeName="transform"
-          type="rotate"
-          from="-8 0 0"
-          to="12 0 0"
-          dur="2.2s"
-          repeatCount="indefinite"
-          additive="sum"/>
-
-        <!-- Gripper -->
-        <g id="gripper" transform="translate(0,-8)">
-          <rect x="-6" y="-6" width="12" height="12" rx="2" fill="#9aa9b1" stroke="#5e6b71" stroke-width="1"/>
-          
-          <!-- Left finger -->
-          <g class="finger-left" transform="translate(-10,0)">
-            <rect x="0" y="-2" width="12" height="4" rx="1.5" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-            <rect x="10" y="-2" width="6" height="4" rx="1.5" fill="#7be7ff"/>
-            <animateTransform
-              attributeName="transform"
-              type="rotate"
-              from="18 6 0"
-              to="-12 6 0"
-              dur="0.9s"
-              repeatCount="indefinite"
-              additive="sum"/>
-          </g>
-
-          <!-- Right finger -->
-          <g class="finger-right" transform="translate(10,0)">
-            <rect x="-12" y="-2" width="12" height="4" rx="1.5" fill="#c7d2da" stroke="#6c7a83" stroke-width="2"/>
-            <rect x="-18" y="-2" width="6" height="4" rx="1.5" fill="#7be7ff"/>
-            <animateTransform
-              attributeName="transform"
-              type="rotate"
-              from="-18 6 0"
-              to="12 6 0"
-              dur="0.9s"
-              repeatCount="indefinite"
-              additive="sum"/>
-          </g>
-
-        </g>
-      </g>
+    <!-- Multiple current flow dots -->
+    <g id="currentDots">
+        <circle cx="50" cy="100" r="4" fill="#f0f" filter="url(#glow)">
+            <animateMotion dur="4s" repeatCount="indefinite">
+                <mpath href="#circuitPath" />
+            </animateMotion>
+        </circle>
+        <circle cx="50" cy="100" r="4" fill="#ff0" filter="url(#glow)">
+            <animateMotion dur="3s" repeatCount="indefinite" begin="1s">
+                <mpath href="#circuitPath"/>
+            </animateMotion>
+        </circle>
+        <!-- <circle r="4" fill="#0ff" filter="url(#glow)">
+            <animateMotion dur="4s" repeatCount="indefinite" begin="2s">
+                <mpath href="#circuitPath" />
+            </animateMotion>
+        </circle> -->
     </g>
-  </g>
+
+    <!-- LEDs -->
+    <circle cx="120" cy="75" r="5" fill="#0ff">
+        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
+            begin="0.1s" />
+    </circle>
+    <circle cx="220" cy="100" r="5" fill="#0ff">
+        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
+            begin="0.3s" />
+    </circle>
+    <circle cx="120" cy="125" r="5" fill="#0ff">
+        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
+            begin="0.5s" />
+    </circle>
+
+    <!-- Glow effect -->
+    <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
 </svg>
