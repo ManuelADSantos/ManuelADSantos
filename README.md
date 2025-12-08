@@ -1,6 +1,13 @@
 <!-- markdownlint-disable MD033 -->
 <h1 align="center">Hi </h1>
 
+<div align="center">
+<!-- <a class="link" href="https://github.com/ManuelADSantos/ManuelADSantos/blame/main/header.svg"> -->
+
+![My Header](header.svg)
+
+</div>
+
 <h3 align="center">I'm Manuel, an Electrical and Computer Engineer!</h3>
 
 ---
@@ -10,6 +17,7 @@
 [![C](https://skills.syvixor.com/api/icons?perline=15&i=c)](https://www.c-language.org/)
 [![C++](https://skills.syvixor.com/api/icons?perline=15&i=cpp)](https://isocpp.org/get-started)
 [![Python](https://skills.syvixor.com/api/icons?perline=15&i=python)](https://www.python.org)
+[![Rust](https://skills.syvixor.com/api/icons?perline=15&i=rust)](https://www.rust-lang.org/)
 [![Bash](https://skills.syvixor.com/api/icons?perline=15&i=bash)](https://www.gnu.org/software/bash/)
 [![Ansible](https://skills.syvixor.com/api/icons?perline=15&i=ansible)](https://www.ansible.com/)
 [![Docker](https://skills.syvixor.com/api/icons?perline=15&i=docker)](https://www.docker.com/)
@@ -21,14 +29,7 @@
 [![ROS](https://skills.syvixor.com/api/icons?perline=15&i=ros)](https://www.ros.org/)
 [![n8n](https://skills.syvixor.com/api/icons?perline=15&i=n8n)](https://n8n.io/)
 [![Fusion 360](https://skills.syvixor.com/api/icons?perline=15&i=autodeskfusion)](https://www.autodesk.com/products/fusion-360)
-[![Rust](https://skills.syvixor.com/api/icons?perline=15&i=rust)](https://www.rust-lang.org/)
 
-</div>
-
-<div align="center">
- <a class="link" href="https://github.com/ManuelADSantos/ManuelADSantos/blame/main/header.svg">
-  <img class="image" src="header.svg" alt="Click to see the source">
- </a>
 </div>
 
 <!-- ==============================================================================================
