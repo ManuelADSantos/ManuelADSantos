@@ -1,34 +1,35 @@
 <!-- markdownlint-disable MD033 -->
-<div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <!-- Left side -->
-    <div style="text-align: center; font-size: 2em;">
-        <strong>Hi there</strong>
-    </div>
-    <!-- Right side -->
-    <div align="center">
-        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Waving Hand" width="40" height="40">
-    </div>
-</div>
+# <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3hua3BvYnB1MWk1cW1nanpnMGdjOGJxazIwNzg2b292djYyeWh1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Bl6VoPv34mX2E/giphy.gif" alt="" width="40" height="60" style="vertical-align:bottom"> Hi there
+
+<!--
+https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif
+https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3hua3BvYnB1MWk1cW1nanpnMGdjOGJxazIwNzg2b292djYyeWh1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Bl6VoPv34mX2E/giphy.gif
+https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29zODczbGk0c3BwNmhweHcyaHo1NnIxaHB1Mm8yMGl5Y2N2ZTVpNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/O9nWm2uAHYz6M/giphy.gif
+https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2Vtc3R4azQ0YWFqZW9rcGdmbWM5OTMyNm84ZWFqczlmNm9naHB6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fVQAbGiCVLMHPjDomE/giphy.gif
+https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXlkenY1ZHRyNDlhbzM1YTF3ZTB6YTJ0emRpbWo4amcyY3ZmZHl4MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/znU5gnJGdG05rWdXd3/giphy.gif
+https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXp1cjBrZXF3Yjk0NGxtbWQ4cWIzaWt3djNmaTBwcmltM3Z4Y3o2eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P021D9ozrToG2fh9Rj/giphy.gif
+https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWtubzQxYzdkY3g3aDJrY25vejlrbTh0dHAyMnYyMnJqdGVtYWtncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8hZpOGNPuaIoaTJZtv/giphy.gif
+https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWxhZjc1NW5pNmQ0dnM5ZjB2cGRzeHd2eXRiYzIxdXE2aWtwNW9yaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/PofGi27wPlnXvUtAGi/giphy.gif
+-->
 
 <div style="text-align: center;">
     <h3>I'm Manuel, a 🇵🇹 Portuguese Electrical and Computer Engineer who likes to play around and find out!</h3>
 </div>
 
-<div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <!-- Left side -->
-    <div>
-        🌱 Currently working at Planet Farms, automating the growth of some tasty salads <br>
-        🔧 Proud owner and maintainer of a nightmare called Ender3 <br>
-        ⚜️ Former Scout Leader and outdoor enthusiast <br>
-    </div>
-    <!-- Right side -->
-    <div align="center">
-
-![My Header](header.svg)
-    </div>
-</div>
-
----
+<table align="center" style="border: none; border-collapse: collapse;">
+	<tr>
+		<!-- Left side -->
+		<td style="padding-right: 20px; vertical-align: top;">
+			🌱 Currently working at Planet Farms, automating the growth of some tasty salads <br>
+			🔧 Proud owner and maintainer of a nightmare called Ender3 <br>
+		  	⚜️ Former Scout Leader and current outdoor enthusiast <br>
+		</td>
+		<!-- Right side -->
+		<td align="center" style="vertical-align: top;">
+			<img src="header.svg" alt="My Header" width="300">
+		</td>
+	</tr>
+</table>
 
 <h3 align="center" style="font-weight: bold"> You can find me playing around with </h3>
 <div align="center">
@@ -51,7 +52,7 @@
 
 </div>
 
----
+#
 
 <h3 align="center" style="font-weight: bold"> Take a look at some of my projects </h3>
 
