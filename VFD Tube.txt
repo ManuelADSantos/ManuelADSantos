@@ -1,0 +1,4 @@
+    <svg xmlns="http://www.w3.org/2000/svg" width="700" height="260" viewBox="0 0 700 260" role="img" aria-label="Stylized VFD tube">
+      <!-- Full SVG content from previous message -->
+      <!-- For readability, the SVG is exactly the same as provided earlier -->
+    </svg>

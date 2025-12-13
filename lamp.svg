@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="260" viewBox="0 0 700 260" role="img" aria-label="Stylized VFD tube">
+  <defs>
+    <!-- glass gradient -->
+    <linearGradient id="glassGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f8ff" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#bfefff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#a6dfff" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <!-- inner dark background -->
+    <linearGradient id="bgGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#071014"/>
+      <stop offset="1" stop-color="#08131a"/>
+    </linearGradient>
+
+    <!-- VFD segment gradient -->
+    <linearGradient id="segGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#7fffd4"/>
+      <stop offset="0.45" stop-color="#41f0c8"/>
+      <stop offset="1" stop-color="#00ffd8"/>
+    </linearGradient>
+
+    <!-- subtle reflection -->
+    <radialGradient id="spec" cx="30%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- glow filter -->
+    <filter id="glow" x="-75%" y="-75%" width="250%" height="250%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- stronger glow for active segments -->
+    <filter id="bigglow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="10" result="g"/>
+      <feColorMatrix in="g" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.9" />
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- segment shape for reuse -->
+    <g id="seg">
+      <rect x="0" y="0" rx="3" ry="3" width="64" height="12"/>
+    </g>
+
+    <!-- seven segment positions as transforms -->
+    <g id="digit">
+      <!-- 7 segments, center at (0,0) - we'll position via use + transforms -->
+      <g id="segA" transform="translate(48,-42) rotate(0)"><use href="#seg" /></g>
+      <g id="segB" transform="translate(74,-14) rotate(90)"><use href="#seg" /></g>
+      <g id="segC" transform="translate(74,14) rotate(90)"><use href="#seg" /></g>
+      <g id="segD" transform="translate(48,42) rotate(0)"><use href="#seg" /></g>
+      <g id="segE" transform="translate(22,14) rotate(90)"><use href="#seg" /></g>
+      <g id="segF" transform="translate(22,-14) rotate(90)"><use href="#seg" /></g>
+      <g id="segG" transform="translate(48,0) rotate(0)"><use href="#seg" /></g>
+    </g>
+  </defs>
+
+  <!-- outer glass tube -->
+  <rect x="20" y="20" rx="26" ry="26" width="660" height="220" fill="url(#glassGrad)" stroke="#9fbac7" stroke-opacity="0.6" stroke-width="2"/>
+
+  <!-- inside dark area -->
+  <g transform="translate(40,40)">
+    <rect width="620" height="180" rx="18" ry="18" fill="url(#bgGrad)" />
+
+    <!-- faint inner vignette -->
+    <rect x="3" y="3" width="614" height="174" rx="15" ry="15" fill="black" opacity="0.065"/>
+
+    <!-- specular reflection -->
+    <ellipse cx="120" cy="20" rx="110" ry="30" fill="url(#spec)" opacity="0.25"/>
+
+    <!-- filaments (thin glowing wires) -->
+    <g opacity="0.9" filter="url(#glow)">
+      <g stroke="#89ffe0" stroke-opacity="0.15" stroke-width="2" stroke-linecap="round">
+        <path d="M20 140 q60 -40 120 0 q60 -40 120 0 q60 -40 120 0" fill="none"/>
+      </g>
+      <g stroke="#7ef0d8" stroke-opacity="0.28" stroke-width="1.2" stroke-linecap="round">
+        <path d="M18 146 q60 -36 120 0 q60 -36 120 0 q60 -36 120 0" fill="none"/>
+      </g>
+    </g>
+
+    <!-- three digit windows -->
+    <!-- window background panels -->
+    <g transform="translate(70,20)">
+      <rect x="0" y="0" rx="12" ry="12" width="160" height="140" fill="#06262a" opacity="0.22"/>
+      <rect x="6" y="6" rx="8" ry="8" width="148" height="128" fill="#021417" opacity="0.55"/>
+    </g>
+
+    <g transform="translate(260,20)">
+      <rect x="0" y="0" rx="12" ry="12" width="160" height="140" fill="#06262a" opacity="0.22"/>
+      <rect x="6" y="6" rx="8" ry="8" width="148" height="128" fill="#021417" opacity="0.55"/>
+    </g>
+
+    <g transform="translate(450,20)">
+      <rect x="0" y="0" rx="12" ry="12" width="160" height="140" fill="#06262a" opacity="0.22"/>
+      <rect x="6" y="6" rx="8" ry="8" width="148" height="128" fill="#021417" opacity="0.55"/>
+    </g>
+
+    <!-- digits: use the reusable digit group; we'll color segments that are 'on' -->
+    <!-- Helper: each segment is a rect reused, but we'll create masks/clips -->
+    <!-- First digit: '2' (segments A,B,G,E,D on) -->
+    <g transform="translate(150,100) scale(1.0)" filter="url(#bigglow)" opacity="1">
+      <!-- background dark -->
+      <g transform="translate(-80,-40)">
+        <g id="d1" fill="#022420">
+          <use href="#digit"/>
+        </g>
+
+        <!-- segments off (dim) -->
+        <g fill="#002a27" opacity="0.25">
+          <g transform="translate(0,0)">
+            <use href="#seg" x="48" y="-42"/>
+          </g>
+        </g>
+
+        <!-- draw segments individually with proper active ones -->
+        <!-- A -->
+        <g transform="translate(0,0)" fill="url(#segGrad)" opacity="1">
+          <rect x="48" y="-42" width="64" height="12" rx="3" ry="3"/>
+        </g>
+        <!-- B -->
+        <g transform="translate(0,0)" fill="url(#segGrad)" opacity="1">
+          <rect x="74" y="-14" width="64" height="12" rx="3" ry="3" transform="rotate(90 74 -14)"/>
+        </g>
+        <!-- G -->
+        <g transform="translate(0,0)" fill="url(#segGrad)" opacity="1">
+          <rect x="48" y="0" width="64" height="12" rx="3" ry="3"/>
+        </g>
+        <!-- E -->
+        <g transform="translate(0,0)" fill="url(#segGrad)" opacity="1">
+          <rect x="22" y="14" width="64" height="12" rx="3" ry="3" transform="rotate(90 22 14)"/>
+        </g>
+        <!-- D -->
+        <g transform="translate(0,0)" fill="url(#segGrad)" opacity="1">
+          <rect x="48" y="42" width="64" height="12" rx="3" ry="3"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Second digit: '8' (all segments on) -->
+    <g transform="translate(340,100) scale(1.0)" filter="url(#bigglow)" opacity="1">
+      <g transform="translate(-80,-40)">
+        <!-- A -->
+        <rect x="48" y="-42" width="64" height="12" rx="3" ry="3" fill="url(#segGrad)"/>
+        <!-- B -->
+        <rect x="74" y="-14" width="64" height="12" rx="3" ry="3" transform="rotate(90 74 -14)" fill="url(#segGrad)"/>
+        <!-- C -->
+        <rect x="74" y="14" width="64" height="12" rx="3" ry="3" transform="rotate(90 74 14)" fill="url(#segGrad)"/>
+        <!-- D -->
+        <rect x="48" y="42" width="64" height="12" rx="3" ry="3" fill="url(#segGrad)"/>
+        <!-- E -->
+        <rect x="22" y="14" width="64" height="12" rx="3" ry="3" transform="rotate(90 22 14)" fill="url(#segGrad)"/>
+        <!-- F -->
+        <rect x="22" y="-14" width="64" height="12" rx="3" ry="3" transform="rotate(90 22 -14)" fill="url(#segGrad)"/>
+        <!-- G -->
+        <rect x="48" y="0" width="64" height="12" rx="3" ry="3" fill="url(#segGrad)"/>
+      </g>
+    </g>
+
+    <!-- Third digit: '5' (A,F,G,C,D on) -->
+    <g transform="translate(530,100) scale(1.0)" filter="url(#bigglow)" opacity="1">
+      <g transform="translate(-80,-40)">
+        <!-- A -->
+        <rect x="48" y="-42" width="64" height="12" rx="3" ry="3" fill="url(#segGrad)"/>
+        <!-- F -->
+        <rect x="22" y="-14" width="64" height="12" rx="3" ry="3" transform="rotate(90 22 -14)" fill="url(#segGrad)"/>
+        <!-- G -->
+        <rect x="48" y="0" width="64" height="12" rx="3" ry="3" fill="url(#segGrad)"/>
+        <!-- C -->
+        <rect x="74" y="14" width="64" height="12" rx="3" ry="3" transform="rotate(90 74 14)" fill="url(#segGrad)"/>
+        <!-- D -->
+        <rect x="48" y="42" width="64" height="12" rx="3" ry="3" fill="url(#segGrad)"/>
+      </g>
+    </g>
+
+    <!-- subtle label text -->
+    <text x="18" y="170" fill="#77ffd6" font-family="Helvetica, Arial, sans-serif" font-size="12" opacity="0.6">
+      Vacuum Fluorescent Display
+    </text>
+
+  </g>
+</svg>
