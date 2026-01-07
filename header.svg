@@ -1,86 +1,479 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 300 200" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    <!-- Dark/light mode CSS -->
+<svg id="svg" viewBox="0 0 300 200" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- ===================== -->
+    <!-- Dark / Light mode -->
+    <!-- ===================== -->
     <style>
-        rect.background { fill: #ffffff; }
-        @media (prefers-color-scheme: dark) 
-        {
-            rect.background { fill: #0b0f1a; }
+        /* ===================== */
+        /* Light mode - Sunset / Terracotta */
+        /* ===================== */
+        rect.bg { fill: #fff6ef; } /* warm off-white */
+
+        .top { fill: #f2b28c; } /* sunlit terracotta */
+        .left { fill: #e18d63; } /* clay shadow */
+        .right { fill: #c96a4a; } /* deep burnt terracotta */
+
+        .pillar { filter: url(#glow); }
+
+        /* ===================== */
+        /* Dark mode - keep as-is */
+        /* ===================== */
+        @media (prefers-color-scheme: dark) {
+        rect.bg { fill: #0b0f1a; }
+
+        .top { fill: #b4ccff; }
+        .left { fill: #7a96f0; }
+        .right { fill: #566dd0; }
         }
     </style>
 
-    <!-- Background -->
-    <rect class="background" width="300" height="200" rx="20" ry="20"/>
 
-    <!-- Wires -->
-    <line x1="50" y1="100" x2="120" y2="100" stroke="#ccc" stroke-width="4" />
-    <line x1="120" y1="100" x2="120" y2="50" stroke="#ccc" stroke-width="4" />
-    <line x1="120" y1="50" x2="220" y2="50" stroke="#ccc" stroke-width="4" />
-    <line x1="220" y1="50" x2="220" y2="150" stroke="#ccc" stroke-width="4" />
-    <line x1="220" y1="150" x2="50" y2="150" stroke="#ccc" stroke-width="4" />
-    <line x1="50" y1="150" x2="50" y2="100" stroke="#ccc" stroke-width="4" />
-
-    <!-- Resistor -->
-    <!-- <rect x="120" y="90" width="20" height="20" fill="#f00" stroke="#ccc" stroke-width="2" /> -->
-
-    <!-- Battery -->
-    <!-- <rect x="40" y="120" width="10" height="30" fill="#f00" />
-    <rect x="60" y="120" width="10" height="30" fill="#0f0" /> -->
-
-    <!-- Switch -->
-    <!-- <line x1="200" y1="50" x2="220" y2="70" stroke="#000" stroke-width="4" />
-    <line x1="200" y1="50" x2="220" y2="70" stroke="#fff" stroke-width="4">
-        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
-    </line> -->
-
-    <!-- Path for current flow -->
-    <path id="circuitPath" fill="none" stroke="none"
-        d="M 0,0 
-        L 120,0
-        L 120,50 
-        Z "/>
-
-    <!-- Multiple current flow dots -->
-    <g id="currentDots">
-        <circle cx="50" cy="100" r="4" fill="#f0f" filter="url(#glow)">
-            <animateMotion dur="4s" repeatCount="indefinite">
-                <mpath href="#circuitPath" />
-            </animateMotion>
-        </circle>
-        <circle cx="50" cy="100" r="4" fill="#ff0" filter="url(#glow)">
-            <animateMotion dur="3s" repeatCount="indefinite" begin="1s">
-                <mpath href="#circuitPath"/>
-            </animateMotion>
-        </circle>
-        <!-- <circle r="4" fill="#0ff" filter="url(#glow)">
-            <animateMotion dur="4s" repeatCount="indefinite" begin="2s">
-                <mpath href="#circuitPath" />
-            </animateMotion>
-        </circle> -->
-    </g>
-
-    <!-- LEDs -->
-    <!-- <circle cx="120" cy="75" r="5" fill="#0ff">
-        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
-            begin="0.1s" />
-    </circle>
-    <circle cx="220" cy="100" r="5" fill="#0ff">
-        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
-            begin="0.3s" />
-    </circle>
-    <circle cx="120" cy="125" r="5" fill="#0ff">
-        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"
-            begin="0.5s" />
-    </circle> -->
-
-    <!-- Glow effect -->
     <defs>
+        <!-- Ambient glow -->
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feGaussianBlur stdDeviation="2.5" result="blur" />
             <feMerge>
                 <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
     </defs>
+
+    <!-- Background -->
+    <rect class="bg" width="300" height="200" rx="22" />
+
+    <clipPath id="bg-clip">
+        <rect width="300" height="200" rx="22" ry="22" />
+    </clipPath>
+
+
+    <!-- ===================== -->
+    <!-- ISOMETRIC FIELD -->
+    <!-- ===================== -->
+    <g clip-path="url(#bg-clip)">
+        <g transform="translate(0 100)">
+            <!-- Pillars Animation Path -->
+            <path id="pillar_path" fill="none" stroke="none"
+                d="M 0 0 
+        C 0,0 5,-15 0,-30
+        C 0,-30 -5,-15 0,0
+        " />
+
+            <!-- ROW 5 -->
+            <g transform="translate(-10 -80)">
+                <g class="pillar" transform="translate(0 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(58 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.3s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(116 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.6s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(174 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.9s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(232 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.2s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(290 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.4s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+            </g>
+
+            <!-- ROW 4 -->
+            <g transform="translate(-40 -40)">
+                <g class="pillar" transform="translate(0 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.1s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(58 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.4s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(116 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.7s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(174 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.0s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(232 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.3s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(290 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.6s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+            </g>
+
+            <!-- ROW 3 -->
+            <g transform="translate(-10 0)">
+                <g class="pillar" transform="translate(0 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(58 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.3s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(116 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.6s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(174 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.9s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(232 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.2s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(290 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.4s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+            </g>
+
+            <!-- ROW 2 -->
+            <g transform="translate(-40 40)">
+                <g class="pillar" transform="translate(0 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.1s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(58 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.4s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(116 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.7s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(174 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.0s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(232 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.3s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(290 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.6s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+            </g>
+
+            <!-- ROW 1 -->
+            <g transform="translate(-10 80)">
+                <g class="pillar" transform="translate(0 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.1s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(58 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.4s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(116 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.7s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(174 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.0s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(232 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.3s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(290 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.6s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+            </g>
+
+            <!-- ROW 0 -->
+            <g transform="translate(-40 120)">
+                <g class="pillar" transform="translate(0 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.1s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(58 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.4s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(116 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="0.7s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(174 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.0s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(232 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.3s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+
+                <g class="pillar" transform="translate(290 0)">
+                    <!-- Pillars Animation -->
+                    <animateMotion type="translate" dur="2s" begin="1.6s" repeatCount="indefinite">
+                        <mpath href="#pillar_path" />
+                    </animateMotion>
+                    <!-- Pillar Definition -->
+                    <polygon class="top" points="0,-20 30,-35 60,-20 30,-5" />
+                    <polygon class="left" points="0,-20 0,20 30,35 30,-5" />
+                    <polygon class="right" points="60,-20 60,20 30,35 30,-5" />
+                </g>
+            </g>
+
+        </g>
+    </g>
+
 </svg>
