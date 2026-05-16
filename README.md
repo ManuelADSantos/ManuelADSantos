@@ -12,7 +12,7 @@
     <tr>
         <!-- Left side -->
         <td style="padding-right: 20px; vertical-align: middle; line-height: 3; font-size: 10px;">
-            🌱 Currently at Planet Farms, automating the growth of tasty salads <br>
+            🧠 Currently at Aalto University, understanding how humans interact with AI <br>
             🌐 <b>Homelab</b> enthusiast and self-proclaimed Raspberry Pi wizard <br>
             🛠️ Proud owner and reviver of a good old Ender3 3D printer<br>
             ⚜️ Former <b>Scout</b> Leader and current outdoor enthusiast <br>
