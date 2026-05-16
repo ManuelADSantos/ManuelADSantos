@@ -12,7 +12,7 @@
     <tr>
         <!-- Left side -->
         <td style="padding-right: 20px; vertical-align: middle; line-height: 3; font-size: 10px;">
-            🧠 Currently at Aalto University, understanding how humans interact with AI <br>
+            🧠 Currently at Aalto University, researching Human-AI interaction <br>
             🌐 <b>Homelab</b> enthusiast and self-proclaimed Raspberry Pi wizard <br>
             🛠️ Proud owner and reviver of a good old Ender3 3D printer<br>
             ⚜️ Former <b>Scout</b> Leader and current outdoor enthusiast <br>
